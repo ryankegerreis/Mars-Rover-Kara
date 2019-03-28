@@ -81,5 +81,3 @@ function receiveCommands(command) {
 }
 
 receiveCommands("rffrfflfrff");
-console.log("The Rover's direction is now: " + rover.direction);
-console.log("The Rover is now at position: " + rover.x + "," + rover.y);
