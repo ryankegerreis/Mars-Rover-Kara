@@ -4,11 +4,12 @@ var rover = {
   direction:"N",
   x:0,
   y:0,
-  position:[],
+  travelLog:[],
 }
 
 
 // ======================
+//Direction
 function turnLeft(){
   console.log("turnLeft was called!");
   switch(rover.direction) {
@@ -25,7 +26,6 @@ function turnLeft(){
       rover.direction="S"
       break;
     }
-
 }
 
 function turnRight(){
@@ -44,7 +44,6 @@ function turnRight(){
       rover.direction="N";
       break;
     }
-
 }
 
 //Movement
@@ -65,8 +64,8 @@ function moveForward() {
       rover.x--;
     break;  
   }
- 
-  console.log("Rover is at position " + rover.x + "," + rover.y)
+  rover.travelLog.push(rover.x,rover.y)
+  console.log("Rover is at position " + "[" + rover.x + "," + rover.y + "]");
 }
 
 //Input Commands
@@ -88,4 +87,7 @@ function receiveCommands(command) {
 }
 
 receiveCommands("rffrfflfrff");
-console.log("Rover is at position " + rover.x + "," + rover.y)
+console.log("Rover is at position " + "[" + rover.x + "," + rover.y + "]");
+console.log("Welcome To The Travel Log");
+console.log("=========================");
+console.log("Rover travelled over coordinates " + rover.travelLog);
