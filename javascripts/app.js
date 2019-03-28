@@ -4,7 +4,10 @@ var rover = {
   direction:"N",
   x:0,
   y:0,
+  position:[],
 }
+
+
 // ======================
 function turnLeft(){
   switch(rover.direction) {
@@ -60,6 +63,7 @@ function moveForward() {
     break;  
   }
   console.log("moveForward was called")
+  console.log("Rover is at position " + rover.x + "," + rover.y)
 }
 
 //Input Commands
@@ -81,3 +85,4 @@ function receiveCommands(command) {
 }
 
 receiveCommands("rffrfflfrff");
+console.log("Rover is at position " + rover.x + "," + rover.y)
