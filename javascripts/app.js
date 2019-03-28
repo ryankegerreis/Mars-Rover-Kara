@@ -10,6 +10,7 @@ var rover = {
 
 // ======================
 function turnLeft(){
+  console.log("turnLeft was called!");
   switch(rover.direction) {
       case "N":
       rover.direction="W";
@@ -24,10 +25,11 @@ function turnLeft(){
       rover.direction="S"
       break;
     }
-console.log("turnLeft was called!");
+
 }
 
 function turnRight(){
+  console.log("turnRight was called!");
   switch(rover.direction) {
     case "N":
       rover.direction="E";
@@ -42,12 +44,13 @@ function turnRight(){
       rover.direction="N";
       break;
     }
-  console.log("turnRight was called!");
+
 }
 
 //Movement
 
 function moveForward() {
+  console.log("moveForward was called")
   switch (rover.direction) {
     case "N":
       rover.y--;
@@ -62,7 +65,7 @@ function moveForward() {
       rover.x--;
     break;  
   }
-  console.log("moveForward was called")
+ 
   console.log("Rover is at position " + rover.x + "," + rover.y)
 }
 
